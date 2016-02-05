@@ -2,7 +2,7 @@
 
 An extension that counts points on trello cards.
 
-[OGD's enhancements for Trello - Chrome Web Store](https://chrome.google.com/webstore/detail/ogds-enhancements-for-tre/ionfplcjpbmgjipcpppgakhkbldeopmd)
+[OGD's enhancements for Trello - Chrome Web Store](https://chrome.google.com/webstore/detail/ogds-enhancements-for-tre/cjghgjfldfggplglagdmomhbachkcjhk)
 
 ![screenshot](images/screenshot.png)
 
