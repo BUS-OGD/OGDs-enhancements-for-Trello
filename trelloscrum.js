@@ -257,7 +257,7 @@
     }
 
     //track card-titles
-    new TextChangeListener("a", "a.js-card-name", function (elm) {
+    new TextChangeListener("span", "span.js-card-name", function (elm) {
         var title = elm.innerText.trim(),
             $card = $(elm).closest(".list-card");
 
