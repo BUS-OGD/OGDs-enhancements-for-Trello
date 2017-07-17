@@ -156,23 +156,35 @@
     background-color: #7F7F7F;
 }
 
-.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-red {
-     background-color: #cb4d4d;
-}
-.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-orange {
-     background-color: #e09952;
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-green {
+     background-color: #34b27d;
 }
 .trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-yellow {
      background-color: #dbdb57;
 }
-.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-green {
-     background-color: #34b27d;
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-orange {
+     background-color: #e09952;
+}
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-red {
+     background-color: #cb4d4d;
 }
 .trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-purple {
      background-color: #9933cc;
 }
 .trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-blue {
      background-color: #4d77cb;
+}
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-sky {
+    background-color: #00C2E0;
+}
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-lime {
+    background-color: #51E898;
+}
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-pink {
+    background-color: #FF80CE;
+}
+.trelloScrum-labelCards-enabled .trelloScrum-seperator.trelloScrum-seperator-black {
+    background-color: #4d4d4d;
 }
 
 body.trelloScrum-showCardNumbers .trelloScrum-seperator .card-short-id {

@@ -154,59 +154,24 @@
                 var labelContainer = newData[0].getOldParentNode(elm);
                 var card = newData[0].getOldParentNode(labelContainer);
                 if (card.classList.contains("trelloScrum-seperator")) {
-                    var color;
-                    if (elm.classList.contains("card-label-green")){
-                        color = "green";
-                    } else if (elm.classList.contains("card-label-yellow")){
-                        color = "yellow";
-                    } else if (elm.classList.contains("card-label-orange")){
-                        color = "orange";
-                    } else if (elm.classList.contains("card-label-red")){
-                        color = "red";
-                    } else if (elm.classList.contains("card-label-purple")){
-                        color = "purple";
-                    } else if (elm.classList.contains("card-label-blue")){
-                        color = "blue";
-                    }
-                    $(card).removeClass("trelloScrum-seperator-" + color);
+                    $(card).removeClass("trelloScrum-seperator-" + getLabelColor(elm));
                 }
             });
             newData[0].added.map(function (elm) {
-                var color;
-                if (elm.classList.contains("card-label-green")){
-                    color = "green";
-                } else if (elm.classList.contains("card-label-yellow")){
-                    color = "yellow";
-                } else if (elm.classList.contains("card-label-orange")){
-                    color = "orange";
-                } else if (elm.classList.contains("card-label-red")){
-                    color = "red";
-                } else if (elm.classList.contains("card-label-purple")){
-                    color = "purple";
-                } else if (elm.classList.contains("card-label-blue")){
-                    color = "blue";
-                }
-                $(elm).closest(".list-card").addClass("trelloScrum-seperator-" + color);
+                $(elm).closest(".list-card").addClass("trelloScrum-seperator-" + getLabelColor(elm));
             });
         }
     }));
     $("div.card-label").map(function () {
-        var color;
-        if (this.classList.contains("card-label-green")){
-            color = "green";
-        } else if (this.classList.contains("card-label-yellow")){
-            color = "yellow";
-        } else if (this.classList.contains("card-label-orange")){
-            color = "orange";
-        } else if (this.classList.contains("card-label-red")){
-            color = "red";
-        } else if (this.classList.contains("card-label-purple")){
-            color = "purple";
-        } else if (this.classList.contains("card-label-blue")){
-            color = "blue";
-        }
-        $(this).closest(".list-card").addClass("trelloScrum-seperator-" + color);
+        $(this).closest(".list-card").addClass("trelloScrum-seperator-" + getLabelColor(elm));
     });
+
+    function getLabelColor(element) {
+        // Example element.className: "card-label card-label-yellow mod-card-detail mod-clickable";
+        var match = element.className.match(/\bcard-label-(\w+)/);
+        // Example match: ["card-label-yellow", "yellow", index: 11, input: "card-label card-label-yellow mod-card-detail mod-clickable"]
+        return match ? match[1] : "null";
+    }
 
     //******************************************************************************************************************
     //  Track list titles and show lists differently if they end if (B) or (D) (for Backlog and done)
