@@ -1,5 +1,6 @@
+if (typeof(browser) === "undefined") browser = chrome;
 document.addEventListener('DOMContentLoaded', function restore_options() {
-    chrome.runtime.sendMessage({type: "getSettings"}, function (response) {
+    browser.runtime.sendMessage({type: "getSettings"}, function (response) {
         var key;
         for (key in response) {
             if (response.hasOwnProperty(key)) {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function restore_options() {
             if (e.target.type === "checkbox") {
                 value = e.target.checked;
             }
-            chrome.runtime.sendMessage({type: "settingUpdated", name: name, value: value });
+            browser.runtime.sendMessage({type: "settingUpdated", name: name, value: value });
             console.log("message sent from popup");
         });
     }

@@ -1,15 +1,17 @@
+if (typeof(browser) === "undefined") browser = chrome;
+
 (function () {
     "use strict";
     var mutationListeners = [];
     var MAX_SIZE = 4;
 
-    chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+    browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         if (message.type === "settings") {
             applySettings(message.content);
         }
     });
 
-    chrome.runtime.sendMessage({type: "getSettings"}, function (response) {
+    browser.runtime.sendMessage({type: "getSettings"}, function (response) {
         applySettings(response);
     });
 
